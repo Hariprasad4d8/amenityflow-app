@@ -1,0 +1,428 @@
+
+/* =========================================
+   AmenityFlow — Organization Registration
+   File: app/page.css
+========================================= */
+
+.register-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 20px;
+  background:
+    radial-gradient(ellipse at 8% 10%, rgba(129, 140, 248, 0.16), transparent 38%),
+    radial-gradient(ellipse at 95% 90%, rgba(192, 132, 252, 0.14), transparent 35%),
+    #f7f8fc;
+  color: #172033;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.register-card {
+  width: 100%;
+  max-width: 510px;
+  padding: 38px 40px;
+  overflow: hidden;
+  border: 1px solid #e7e9f2;
+  border-radius: 24px;
+  background: #ffffff;
+  box-shadow:
+    0 24px 70px rgba(30, 41, 59, 0.08),
+    0 3px 12px rgba(30, 41, 59, 0.03);
+  animation: register-appear 0.45s ease-out;
+}
+
+/* Brand */
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 32px;
+}
+
+.brand-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: #ffffff;
+  font-size: 23px;
+  font-weight: 800;
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.25);
+}
+
+.brand h1,
+.brand h2,
+.brand-name {
+  margin: 0;
+  color: #242044;
+  font-size: 23px;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+}
+
+.brand p,
+.brand-subtitle {
+  margin: 3px 0 0;
+  color: #7b8498;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* Heading */
+
+.form-heading {
+  margin-bottom: 27px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 12px;
+  color: #635bdb;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+}
+
+.form-heading h1,
+.form-heading h2 {
+  margin: 0 0 10px;
+  color: #19172e;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -1px;
+}
+
+.form-heading p {
+  margin: 0;
+  color: #7a8194;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* Form fields */
+
+.register-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.form-group label {
+  color: #33364b;
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  min-width: 0;
+  min-height: 48px;
+  padding: 12px 14px;
+  border: 1px solid #dfe3ed;
+  border-radius: 11px;
+  outline: none;
+  background-color: #ffffff;
+  color: #25283b;
+  font-family: inherit;
+  font-size: 13px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #a0a6b5;
+}
+
+.form-group select {
+  cursor: pointer;
+}
+
+.form-group input:hover,
+.form-group select:hover,
+.form-group textarea:hover {
+  border-color: #b9bdf4;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #7770ed;
+  background-color: #fdfdff;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.11);
+}
+
+.form-group input:disabled,
+.form-group select:disabled {
+  cursor: not-allowed;
+  background: #f3f4f6;
+}
+
+/* Two-column form rows, if used */
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+
+/* Free-trial banner */
+
+.trial-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  margin-top: 2px;
+  padding: 16px;
+  border: 1px solid #e2ddff;
+  border-radius: 13px;
+  background: linear-gradient(110deg, #f4f2ff, #faf7ff);
+}
+
+.trial-icon {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #e5e0ff;
+  color: #5b45ce;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.trial-note strong {
+  display: block;
+  margin-bottom: 3px;
+  color: #352c79;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.trial-note p {
+  margin: 0;
+  color: #777194;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* Create organization button */
+
+.register-card form > button,
+.register-submit {
+  width: 100%;
+  min-height: 49px;
+  margin-top: 2px;
+  padding: 13px 18px;
+  border: none;
+  border-radius: 11px;
+  background: linear-gradient(115deg, #4f46e5 0%, #6d45df 55%, #7c3aed 100%);
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.15px;
+  cursor: pointer;
+  box-shadow: 0 7px 18px rgba(91, 70, 220, 0.22);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.register-card form > button:hover,
+.register-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 11px 24px rgba(91, 70, 220, 0.3);
+}
+
+.register-card form > button:active,
+.register-submit:active {
+  transform: translateY(0);
+}
+
+.register-card form > button:disabled,
+.register-submit:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Success and error messages */
+
+.message {
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.success-message {
+  border: 1px solid #a7f3d0;
+  background: #ecfdf5;
+  color: #047857;
+}
+
+.error-message {
+  border: 1px solid #fecaca;
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
+/* Organization creation result */
+
+.organization-result {
+  margin-top: 22px;
+  padding: 20px;
+  border: 1px solid #d8d4fe;
+  border-radius: 15px;
+  background: linear-gradient(145deg, #f1f0ff, #faf7ff);
+}
+
+.organization-result h2 {
+  margin: 0 0 10px;
+  color: #352c79;
+  font-size: 20px;
+}
+
+.organization-id {
+  margin: 12px 0;
+  padding: 13px;
+  overflow-wrap: anywhere;
+  border: 1px dashed #b7b0f5;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #4338ca;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 12px;
+}
+
+.copy-button {
+  width: 100%;
+}
+
+.save-id {
+  margin-top: 10px;
+  color: #777194;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* Sign-in link */
+
+.login-note {
+  margin: 24px 0 0;
+  color: #858b9b;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.login-link {
+  color: #5547dc;
+  font-weight: 800;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.login-link:hover {
+  color: #7c3aed;
+  text-decoration: underline;
+}
+
+/* Footer */
+
+.register-card footer {
+  margin-top: 26px;
+  padding-top: 19px;
+  border-top: 1px solid #edf0f5;
+  color: #a0a5b2;
+  text-align: center;
+  font-size: 11px;
+}
+
+/* Responsive design */
+
+@media (max-width: 560px) {
+  .register-page {
+    align-items: flex-start;
+    padding: 20px 12px;
+  }
+
+  .register-card {
+    padding: 27px 20px;
+    border-radius: 19px;
+  }
+
+  .brand {
+    margin-bottom: 27px;
+  }
+
+  .brand-icon {
+    width: 43px;
+    height: 43px;
+  }
+
+  .brand h1,
+  .brand h2,
+  .brand-name {
+    font-size: 21px;
+  }
+
+  .form-heading h1,
+  .form-heading h2 {
+    font-size: 27px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .register-card {
+    animation: none;
+  }
+
+  .register-card button,
+  .register-submit,
+  .form-group input,
+  .form-group select {
+    transition: none;
+  }
+}
+
+@keyframes register-appear {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
